@@ -4,7 +4,7 @@ public class snake {
     public int xsnak;
     public int ysnak;
 
-    private String snakyell = "Yo dead bunny!";
+    private String snakyell = "Snake says: \"Yo dead bunny!\"";
 
     public snake( Integer xsnak, Integer ysnak ) {
         this.setXsnak(xsnak);

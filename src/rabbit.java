@@ -5,7 +5,7 @@ public class rabbit {
         public int yrabb;
 
         //string for rabbit scream
-        private String rabbyell = "oh not again!";
+        private String rabbyell = "Rabbit says: \"Oh not again!\"";
 
         public rabbit( int xrabb, int yrabb ) {
             this.setXrabb(xrabb);
