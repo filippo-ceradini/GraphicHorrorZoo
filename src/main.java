@@ -6,24 +6,15 @@ public class main {
 
     System.out.println(rabbit1.toRabbpos());
     System.out.println(snake1.toSnakepos());
-    snake1.setXsnak(--snake1.xsnak);
-    snake1.setYsnak(--snake1.ysnak);
-    System.out.println(snake1.toSnakepos());
-    rabbit1.setXrabb(++rabbit1.xrabb);
-    rabbit1.setYrabb(++rabbit1.yrabb);
-    System.out.println(rabbit1.toRabbpos());
+    for(int i=1; i<4;i++) {
         snake1.setXsnak(--snake1.xsnak);
         snake1.setYsnak(--snake1.ysnak);
         System.out.println(snake1.toSnakepos());
         rabbit1.setXrabb(++rabbit1.xrabb);
         rabbit1.setYrabb(++rabbit1.yrabb);
         System.out.println(rabbit1.toRabbpos());
-        snake1.setXsnak(--snake1.xsnak);
-        snake1.setYsnak(--snake1.ysnak);
-        System.out.println(snake1.toSnakepos());
-        rabbit1.setXrabb(++rabbit1.xrabb);
-        rabbit1.setYrabb(++rabbit1.yrabb);
-        System.out.println(rabbit1.toRabbpos());
+    }
+
         System.out.println(rabbit1.getRabbyell());
         snake1.setXsnak(--snake1.xsnak);
         snake1.setYsnak(--snake1.ysnak);
