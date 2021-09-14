@@ -1,8 +1,6 @@
 public class Main {
 
     public static void main(String[] args) {
-    snake snake1 = new snake(9,9);
-    rabbit rabbit1 = new rabbit(2,2);
     animal snake = new animal(9,9,"Snake says: \"Yo dead bunny!\"", "Snake");
     animal bunny = new animal(2,2,"Rabbit says: \"Oh not again!\"", "Rabbit");
 
@@ -23,8 +21,8 @@ public class Main {
                 System.out.println(snake.animalYell);
 
             } else {
-                rabbit1.setXrabb(++bunny.xpos);
-                rabbit1.setYrabb(++bunny.ypos);
+                bunny.setXpos(++bunny.xpos);
+                bunny.setXpos(++bunny.ypos);
                 System.out.println(bunny.toAnimalPos());
                 }
 
