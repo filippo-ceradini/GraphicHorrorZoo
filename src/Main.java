@@ -1,35 +1,33 @@
 public class Main {
-
     public static void main(String[] args) {
-    animal snake = new animal(9,9,"Snake says: \"Yo dead bunny!\"", "Snake");
-    animal bunny = new animal(2,2,"Rabbit says: \"Oh not again!\"", "Rabbit");
+        /*int rand1 = (int)Math.floor(Math.random()*(8));
+        int rand2 = (int)Math.floor(Math.random()*(8));
+        int rand3 = (int)Math.floor(Math.random()*(8));
+        int rand4 = (int)Math.floor(Math.random()*(8));*/
 
-    System.out.println(snake.toAnimalPos());
-    System.out.println(bunny.toAnimalPos());
+        animal snake = new animal(9, 9, "Snake says: \"Yo dead bunny!\"", "Snake");
+        animal bunny = new animal(0, 0, "Rabbit says: \"Oh not again!\"", "Rabbit");
 
-        for(int i=1; i<5;i++) {
+        System.out.println(snake.toAnimalPos());
+        System.out.println(bunny.toAnimalPos());
 
-            //If for rabbit if his position is next to snake position
-            if(bunny.xpos == snake.xpos -1 && bunny.xpos == snake.xpos- 1){
-                System.out.println(bunny.animalYell);
-            }
-                snake.setXpos(--snake.xpos);
-                snake.setYpos(--snake.ypos);
-                System.out.println(snake.toAnimalPos());
-            //if for snake if his position is the same as rabbit
-            if( bunny.xpos == snake.xpos && bunny.ypos == snake.ypos){
-                System.out.println(snake.animalYell);
-
-            } else {
-                bunny.setXpos(++bunny.xpos);
-                bunny.setXpos(++bunny.ypos);
-                System.out.println(bunny.toAnimalPos());
+            while (bunny.getXpos() != snake.getXpos() && bunny.getYpos() != snake.getYpos()) {
+                bunny.moveFwrd();
+                if (bunny.getXpos() == snake.getXpos() - 1 && bunny.getYpos() == snake.getYpos() - 1) {
+                    System.out.println(bunny.getAnimalYell());
+                    snake.moveBack();
+                    break;
                 }
+                if (bunny.getXpos() == snake.getXpos() && bunny.getYpos() == snake.getYpos()) {break;}
+                snake.moveBack();
+                if (bunny.getXpos() == snake.getXpos() - 1 && bunny.getYpos() == snake.getYpos() - 1) {
+                    System.out.println(bunny.getAnimalYell());}
 
-        }
-
-
-
-
+            }
+            System.out.println(snake.getAnimalYell());
+        //if (bunny.getPos() ==snake.getPos()){System.out.println("equal");}
     }
 }
+
+
+
