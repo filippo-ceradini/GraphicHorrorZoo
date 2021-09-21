@@ -3,6 +3,10 @@ public class AnimGraph {
     private String mid;
     private String bott;
 
+<<<<<<< HEAD
+=======
+    //Constructor for Animal Graphic
+>>>>>>> origin/if_zoo
     public AnimGraph(){}
 
     public AnimGraph(String top, String mid, String bott) {
