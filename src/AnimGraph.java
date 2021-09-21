@@ -3,6 +3,7 @@ public class AnimGraph {
     private String mid;
     private String bott;
 
+    //Constructor for Animal Graphic
     public AnimGraph(){}
 
     public AnimGraph(String top, String mid, String bott) {
