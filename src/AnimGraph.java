@@ -3,7 +3,10 @@ public class AnimGraph {
     private String mid;
     private String bott;
 
+<<<<<<< HEAD
     //Constructor for Animal Graphic
+=======
+>>>>>>> e9544a3 (used class animal to simplify rabbit and snake)
     public AnimGraph(){}
 
     public AnimGraph(String top, String mid, String bott) {
