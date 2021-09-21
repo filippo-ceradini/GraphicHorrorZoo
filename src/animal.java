@@ -13,45 +13,22 @@ public class animal {
         this.setAnimGraph(var5);
     }
 
-    public void setXpos(int var1) {
-        this.xpos = var1;
-    }
-
-    public void setYpos(int var1) {
-        this.ypos = var1;
-    }
-
-    public void setAnimalYell(String var1) {
-        this.animalYell = var1;
-    }
-
-    public void setAnimalName(String var1) {
-        this.animalName = var1;
-    }
-
-    private void setAnimGraph(AnimGraph var1) {
-        this.graph = var1;
-    }
+    public void setXpos(int var1) {this.xpos = var1;}
+    public void setYpos(int var1) {this.ypos = var1;}
+    public void setAnimalYell(String var1) {this.animalYell = var1;}
+    public void setAnimalName(String var1) {this.animalName = var1;}
+    private void setAnimGraph(AnimGraph var1) {this.graph = var1;}
 
     public String getAnimalName() {
-        return this.animalName;
-    }
-
+        return this.animalName;}
     public int getXpos() {
-        return this.xpos;
-    }
-
+        return this.xpos;}
     public int getYpos() {
-        return this.ypos;
-    }
-
+        return this.ypos;}
     public String getAnimalYell() {
-        return this.animalYell;
-    }
-
+        return this.animalYell;}
     public AnimGraph getGraph() {
-        return this.graph;
-    }
+        return this.graph;}
 
     public void moveFwrd() {
         ++this.xpos;
