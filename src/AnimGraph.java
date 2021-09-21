@@ -3,21 +3,24 @@ public class AnimGraph {
     private String mid;
     private String bott;
 
-<<<<<<< HEAD
-=======
-    //Constructor for Animal Graphic
->>>>>>> origin/if_zoo
-    public AnimGraph(){}
-
-    public AnimGraph(String top, String mid, String bott) {
-        this.top = top;
-        this.mid = mid;
-        this.bott = bott;
+    public AnimGraph() {
     }
 
-    public String getTop() {return top;}
-    public String getMid() {return mid;}
-    public String getBott() {return bott;}
+    public AnimGraph(String var1, String var2, String var3) {
+        this.top = var1;
+        this.mid = var2;
+        this.bott = var3;
+    }
 
+    public String getTop() {
+        return this.top;
+    }
 
+    public String getMid() {
+        return this.mid;
+    }
+
+    public String getBott() {
+        return this.bott;
+    }
 }

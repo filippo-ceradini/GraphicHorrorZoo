@@ -1,53 +1,50 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decomp
 import java.util.Scanner;
 
 public class Run {
     public Run() {
     }
 
-    public static void main(String[] args) {
-        String snakeyell = "+—————————————————————————————+\n|   “You’re Dead Bunny!       |\n|      ---_ ......._-_--.     |    \n|     (|\\ /      / /| \\  \\    |\n|     /  /     .'  -=-'   `.  |\n|    /  /    .'             ) |\n|  _/  /   .'        _.)   /  |\n| / o   o        _.-' /  .'   |\n| \\          _.-'    / .'*|   |\n|  \\______.-'//    .'.' \\*|   |\n|   \\|  \\ | //   .'.' _ |*|   |\n|    `   \\|//  .'.'_ _ _|*|   |\n|     .  .// .'.' | _ _ \\*|   |\n|     \\`-|\\_/ /    \\ _ _ \\*\\  |\n|      `/'\\__/      \\ _ _ \\*\\ |\n|     /^|            \\ _ _ \\*\\|\n|    '  `             \\ _ _ \\*| \n|                      \\ - - \\|\n+————————————————————————————-+";
-        String rabbityell = "+—————————————————————————————+\n|                         .\". |\n|   “Oh, not again!”     /  | |\n|              \\        /  /  |\n|               \\      / ,\"   |\n|          .-------.--- /     |\n|         \"._ __.-/ o. o\\     | \n|            \"   (    Y  )    |\n|                 )     /     |\n|                /     (      |\n|               /       Y     |\n|           .-\"         |     |\n|          /  _     \\    \\    |\n|         /    `. \". ) /' )   |\n|        Y       )( / /(,/    |\n|       ,|      /     )       |\n|      ( |     /     /        |\n|       \" \\_  (__   (__       |\n|           “-._,)—._,_)      |\n+————————————————————————————-+";
-        AnimGraph gSnake = new AnimGraph("|   Y   ", "|  (\")  ", "|   \\\\  ");
-        AnimGraph gRabbit = new AnimGraph("| (\\_/) ", "| (o.o) ", "| (___)0");
-        animal snake = new animal(9, 9, snakeyell, "Snake", gSnake);
-        animal bunny = new animal(1, 1, rabbityell, "Rabbit", gRabbit);
-        System.out.println(snake.toAnimalPos());
-        System.out.println(bunny.toAnimalPos());
-        Graphic.gridAnim(bunny, snake);
-        Scanner userInput = new Scanner(System.in);
+    public static void main(String[] var0) {
+        String var1 = "+—————————————————————————————+\n|   “You’re Dead Bunny!       |\n|      ---_ ......._-_--.     |    \n|     (|\\ /      / /| \\  \\    |\n|     /  /     .'  -=-'   `.  |\n|    /  /    .'             ) |\n|  _/  /   .'        _.)   /  |\n| / o   o        _.-' /  .'   |\n| \\          _.-'    / .'*|   |\n|  \\______.-'//    .'.' \\*|   |\n|   \\|  \\ | //   .'.' _ |*|   |\n|    `   \\|//  .'.'_ _ _|*|   |\n|     .  .// .'.' | _ _ \\*|   |\n|     \\`-|\\_/ /    \\ _ _ \\*\\  |\n|      `/'\\__/      \\ _ _ \\*\\ |\n|     /^|            \\ _ _ \\*\\|\n|    '  `             \\ _ _ \\*| \n|                      \\ - - \\|\n+————————————————————————————-+";
+        String var2 = "+—————————————————————————————+\n|                         .\". |\n|   “Oh, not again!”     /  | |\n|              \\        /  /  |\n|               \\      / ,\"   |\n|          .-------.--- /     |\n|         \"._ __.-/ o. o\\     | \n|            \"   (    Y  )    |\n|                 )     /     |\n|                /     (      |\n|               /       Y     |\n|           .-\"         |     |\n|          /  _     \\    \\    |\n|         /    `. \". ) /' )   |\n|        Y       )( / /(,/    |\n|       ,|      /     )       |\n|      ( |     /     /        |\n|       \" \\_  (__   (__       |\n|           “-._,)—._,_)      |\n+————————————————————————————-+";
+        AnimGraph var3 = new AnimGraph("|   Y   ", "|  (\")  ", "|   \\\\  ");
+        AnimGraph var4 = new AnimGraph("| (\\_/) ", "| (o.o) ", "| (___)0");
+        animal var5 = new animal(9, 9, var1, "Snake", var3);
+        animal var6 = new animal(1, 1, var2, "Rabbit", var4);
+        System.out.println(var5.toAnimalPos());
+        System.out.println(var6.toAnimalPos());
+        Graphic.gridAnim(var6, var5);
+        Scanner var7 = new Scanner(System.in);
 
-        while(bunny.getXpos() != snake.getXpos() && bunny.getYpos() != snake.getYpos()) {
-            bunny.moveFwrd();
-            Graphic.gridAnim(snake, bunny);
-            String input;
-            if (bunny.getXpos() == snake.getXpos() - 1 && bunny.getYpos() == snake.getYpos() - 1) {
-                System.out.println(bunny.getAnimalYell());
-                input = userInput.nextLine();
-                if (!input.isEmpty()) {
+        while(var6.getXpos() != var5.getXpos() && var6.getYpos() != var5.getYpos()) {
+            var6.moveFwrd();
+            Graphic.gridAnim(var5, var6);
+            String var8;
+            if (var6.getXpos() == var5.getXpos() - 1 && var6.getYpos() == var5.getYpos() - 1) {
+                System.out.println(var6.getAnimalYell());
+                var8 = var7.nextLine();
+                if (!var8.isEmpty()) {
                 }
 
-                snake.moveBack();
-                Graphic.gridAnim(snake, bunny);
+                var5.moveBack();
+                Graphic.gridAnim(var5, var6);
                 break;
             }
 
-            if (bunny.getXpos() == snake.getXpos() && bunny.getYpos() == snake.getYpos()) {
+            if (var6.getXpos() == var5.getXpos() && var6.getYpos() == var5.getYpos()) {
                 break;
             }
 
-            snake.moveBack();
-            Graphic.gridAnim(snake, bunny);
-            if (bunny.getXpos() == snake.getXpos() - 1 && bunny.getYpos() == snake.getYpos() - 1) {
-                System.out.println(bunny.getAnimalYell());
-                input = userInput.nextLine();
-                if (!input.isEmpty()) {
+            var5.moveBack();
+            Graphic.gridAnim(var5, var6);
+            if (var6.getXpos() == var5.getXpos() - 1 && var6.getYpos() == var5.getYpos() - 1) {
+                System.out.println(var6.getAnimalYell());
+                var8 = var7.nextLine();
+                if (!var8.isEmpty()) {
                 }
             }
         }
 
-        System.out.println(snake.getAnimalYell());
+        System.out.println(var5.getAnimalYell());
     }
 }
